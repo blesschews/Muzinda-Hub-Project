@@ -14,6 +14,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +38,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
-        // Add a marker in Sydney and move the camera
+        // Add a marker in Harare and move the camera
         LatLng BlessCoffee = new LatLng(-17.827872, 31.040936);
         mMap.addMarker(new MarkerOptions().position(BlessCoffee).title("Marker at BlessCoffee"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(BlessCoffee));
